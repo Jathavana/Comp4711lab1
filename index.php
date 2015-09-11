@@ -12,6 +12,7 @@ JATHAVAN ARUMUGAM A008790048
         <?php
             include('student.php');
 
+            //Student one
             $students = array();
             $first = new Student();
             $first->surname = "Doe";
@@ -23,6 +24,7 @@ JATHAVAN ARUMUGAM A008790048
             $first->add_grade(55);
             $students['j123'] = $first;
             
+            //Student two
             $second = new Student();
             $second->surname = "Einstein";
             $second->first_name = "Albert";
@@ -34,6 +36,7 @@ JATHAVAN ARUMUGAM A008790048
             $second->add_grade(50);
             $students['a456'] = $second;
             
+            //Student three
             $third = new Student();
             $third->surname = "Arumugam";
             $third->first_name = "Jathavan";
@@ -42,8 +45,6 @@ JATHAVAN ARUMUGAM A008790048
             $students['A444'] = $third;
             
             ksort($students);	// one of the many sort functions
-            
-            
             
             foreach($students as $student)
             echo $student->toString();
