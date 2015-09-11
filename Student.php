@@ -1,17 +1,16 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of Student
  *
- * @author Jathavan-Mac
+ * @author Jathavan Arumugam
  */
 class Student {
+    
+    /**
+     * This is the constructor, it creates
+     * the last name, firstname, and initialises
+     * the email and grades arrays
+     */
     function __construct() {
         $this->surname = '';
         $this->first_name = '';
@@ -19,6 +18,11 @@ class Student {
         $this->grades = array();
     }
     
+    /**
+     * This function calculates their average grade
+     * and returns the average value
+     * @return double $total
+     */
     function average() {
         $total = 0;
         foreach ($this->grades as $value)
@@ -26,14 +30,29 @@ class Student {
         return $total / count($this->grades);
     }
     
+    /**
+     * A setter function that assigns the email addresses
+     * that each student has with the type of email. 
+     * @param string $email
+     * @param string $address
+     */
     function add_email($which, $address){
         $this->emails[$which] = $address;
     }
     
+    /**
+     * A setter function that adds the grade to the grades array.
+     * @param double $grade
+     */
     function add_grade($grade){
         $this->grades[] = $grade;
     }
     
+    /**
+     * A function that returns the students information in a 
+     * stringified format. 
+     * @return string
+     */
     function toString() {
         $result = $this->first_name . ' ' . $this->surname;
         $result .= ' ('.$this->average().")\n";
