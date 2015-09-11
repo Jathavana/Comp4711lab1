@@ -46,8 +46,9 @@ JATHAVAN ARUMUGAM A008790048
             
             ksort($students);	// one of the many sort functions
             
+            //Print all the available students
             foreach($students as $student)
-            echo $student->toString();
+                echo $student->toString();
         ?>
     </body>
 </html>
