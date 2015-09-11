@@ -48,7 +48,6 @@ JATHAVAN ARUMUGAM A008790048
             
             foreach($students as $student)
             echo $student->toString();
-
         ?>
     </body>
 </html>
